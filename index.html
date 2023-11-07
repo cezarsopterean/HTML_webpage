@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport">
+        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Restaurant Paprika</title>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="navbar">
+                <div class="logo"><a href="#"> </a></div>
+                <ul class="link">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="loc/inf">Location/Info</a></li>
+                    <li><a href="menu">Menu</a></li>
+                    <li><a href="about">About</a></li>
+                    <li><a href="reservations">Reservations</a></li>
+                </ul>
+                <div class="toggle_button">
+                    <i class="fa fa-bars"></i>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="loc/inf">Location/Info</a></li>
+                <li><a href="menu">Menu</a></li>
+                <li><a href="about">About</a></li>
+                <li><a href="reservations">Reservations</a></li>
+            </div>
+        </header>
+
+        <div class="slide">
+            <div class="box titlebox"><em>Restaurant Paprika</em></div>
+            <button class="box scrollbox" onclick="botScroll()">&#8659;</button>
+        </div>
+
+        <div class="location navi-buttons">
+            <img class="image img1" src="images/location.jpg">
+            <div class="loctxt navi-txt">Location/Info</div>
+        </div>
+
+        <div class="menu navi-buttons">
+            <img class="image img2" src="images/menu.jpg">
+            <div class="menutxt navi-txt">Menu</div>
+        </div>
+
+        <div class="reservations navi-buttons">
+            <img class="image img3" src="images/reservations.jpg">
+            <div class="restxt navi-txt">Reservations</div>
+        </div>
+
+        <div class="about navi-buttons">
+            <img class="image img4" src="images/about.jpg">
+            <div class="abttxt navi-txt">About</div>
+        </div>
+
+
+        <script src="site.js" charset="utf-8"></script>
+        <script>
+            const toggleButton = document.querySelector('.toggle_button')
+            const toggleButtonIcon = document.querySelector('.toggle_button i')
+            const dropDown = document.querySelector('.dropdown')
+
+            toggleButton.onclick = function () {
+                dropDown.classList.toggle('open')
+                const isOpen = dropDown.classList.contains('open')
+
+            toggleButtonIcon.classList = isOpen
+                ? 'fa fa-window-close'
+                : 'fa fa-bars'
+            }
+        </script>
+    </body>
+
+</html>

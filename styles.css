@@ -1,0 +1,252 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-image: url("images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+a:hover {
+    color: gray;
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+    margin: 0rem;
+    height: 0vh;
+}
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .link {
+    display: flex;
+    gap: 2rem;
+}
+
+.navbar .toggle_button {
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    display: none;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0px;
+    width: 300px;
+    background: rgba(0,0,0,0.5);
+    background-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown.open {
+    height: 240px;
+}
+
+.dropdown li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (max-width: 1920px) {
+    .navbar .link {
+        display: none;
+    }
+
+    .navbar .toggle_button {
+        display: block;
+    }
+
+    .dropdown {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .dropdown {
+        left: 2rem;
+        width: unset;
+    }
+}
+
+.slide{
+    text-align: center;
+    height: 100vh;
+    width: 100%;
+    background-image: url(images/img1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: 5s;
+    animation-name: animate;
+    animation-direction: alternate-reverse;
+    animation-play-state: running;
+    animation-timing-function: ease-in-out;
+    animation-duration: 20s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes animate{
+    0%{
+        background-image: url(images/img2.jpg);
+    }
+    50%{
+        background-image: url(images/img3.jpg);
+    }
+    100%{
+        background-image: url(images/img1.jpg);
+    }
+}
+
+.box {
+    font-size: 40px;
+    position: relative;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.scrollbox {
+    top: 780px;
+    color: rgba(240,240,240, 1);
+    padding: 5px;
+    display: inline-block;
+    width: 60px;
+    border-radius: 50%;
+    border: none;
+}
+
+.scrollbox:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.8);
+    transition: all 0.5s ease;
+}
+
+.titlebox {
+    font-family: 'Times New Roman', serif;
+    top: 750px;
+    color: rgba(257, 257, 257, 1);
+    width: 380px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.image {
+    width: 500px;
+    height: 600px;
+    object-fit: cover;
+    border: 4px solid rgba(0, 0, 0, 0.8);
+    border-radius: 20px;
+    display: block;
+    transition: 0.4s;
+}
+
+.image:hover {
+    filter: blur(4px);
+    transition: 0.4s;
+}
+
+.navi-buttons {
+    width: 500px;
+    height 600px;
+    background-color: rgba(0,0,0,1);
+    border-radius: 20px;
+    position: relative;
+    float: left;
+    display: inline;
+}
+
+.navi-buttons:hover {
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.8);
+    transition: all 0.5s ease;
+}
+
+.navi-txt {
+    position: absolute;
+    font-size: 30px;
+    background-color: rgba(0,0,0,0.8);
+    border-radius: 20px;
+    padding: 10px;
+    color: rgba(257, 257, 257, 1);
+    pointer-events: none;
+}
+
+.location {
+    top: 140px;
+    left: 15%;
+}
+
+.loctxt {
+    top: 270px;
+    left: 155px;
+}
+
+.menu {
+    top: 140px;
+    left: 650px;
+    display: inline;
+}
+
+.menutxt {
+    top: 270px;
+    left: 210px;
+}
+
+.reservations {
+    top: 870px;
+    left: 150px;
+}
+
+.restxt {
+    top: 270px;
+    left: 160px;
+}
+
+.about {
+    top: 270px;
+    left: 280px;
+}
+
+.abttxt {
+    top: 270px;
+    left: 210px;
+}
